@@ -49,7 +49,12 @@ const list = document.querySelector('ul');
 // });
 
 list.addEventListener('click',event =>{
-    event.target.classList.toggle('highlight');
+    // event.target.classList.toggle('highlight');
+    event.target.closest('li').classList.toggle('highlight');
+    //form.submit();
+    button.click();
 });
+
+
 
 
