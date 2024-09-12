@@ -31,12 +31,12 @@ div.addEventListener("click", (event) => {
   console.log("CLICKED DIV");
   console.log(event);
 });
-button.addEventListener("click", (event) => {
+button.addEventListener("click", function(event) {
   event.stopPropagation();
   //event.stopImmediatePropagation();
-
   console.log("CLICKED BUTTON");
   console.log(event);
+  console.log(this); // use regular function to get element
 });
 
 const listItems = document.querySelectorAll('li');
@@ -54,6 +54,8 @@ list.addEventListener('click',event =>{
     //form.submit();
     button.click();
 });
+
+
 
 
 
