@@ -32,9 +32,24 @@ div.addEventListener("click", (event) => {
   console.log(event);
 });
 button.addEventListener("click", (event) => {
-  // event.stopPropagation();
+  event.stopPropagation();
   //event.stopImmediatePropagation();
 
   console.log("CLICKED BUTTON");
   console.log(event);
 });
+
+const listItems = document.querySelectorAll('li');
+const list = document.querySelector('ul');
+
+// listItems.forEach(li=>{
+// li.addEventListener('click',event=>{
+//     event.target.classList.toggle('highlight');
+// })
+// });
+
+list.addEventListener('click',event =>{
+    event.target.classList.toggle('highlight');
+});
+
+
